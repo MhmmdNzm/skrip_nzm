@@ -1,0 +1,224 @@
+/* ========================= PAGE WRAPPER ========================= */
+.page-wrapper {
+    margin-left: 250px;
+    padding: 90px 35px 35px;
+    transition: 0.3s ease;
+}
+
+.sidebar.collapsed ~ .page-wrapper {
+    margin-left: 80px;
+}
+
+/* ========================= TABLE WRAPPER ========================= */
+.table-wrapper {
+    background: #ffffff;
+    padding: 0;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    overflow: hidden;
+    border: 1px solid #e2e2e2;
+    margin-top: 18px;
+}
+
+/* ========================= TABLE HEADER ========================= */
+.table-modern thead tr {
+    background: #1E2A3A !important;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.6px;
+}
+
+.table-modern thead th {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+/* Header Normalisasi rapi */
+.table-modern th.bobot-norm-header {
+    text-align: center !important;
+    white-space: nowrap;
+}
+
+/* ========================= TABLE BODY ========================= */
+.table-modern td {
+    padding: 10px 12px !important;
+    font-size: 14px;
+    border-color: #e5e5e5 !important;
+}
+
+.table-modern tbody tr {
+    transition: 0.25s ease;
+}
+
+.table-modern tbody tr:hover {
+    background: rgba(58,109,171,0.08) !important;
+}
+
+.table-modern tbody tr:nth-child(odd) {
+    background: #fafafa;
+}
+
+/* ========================= KOLOM ID ========================= */
+.table-modern td.id-col {
+    font-weight: normal !important;
+    color: #555 !important;
+    text-transform: uppercase !important;
+    text-align: left !important;
+}
+
+/* ========================= KOLOM BOBOT ========================= */
+.table-modern td.bobot-col {
+    text-align: center !important;
+    font-weight: normal !important;
+    vertical-align: middle !important;
+}
+
+/* ========================= KOLOM NORMALISASI ========================= */
+.table-modern td.bobot-norm {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.table-modern td.bobot-norm span {
+    font-weight: normal !important;
+    color: #333 !important;
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+}
+
+/* ========================= TOTAL ROW ========================= */
+.table-modern .total-row td {
+    background: #f3f3f3 !important;
+    height: 45px !important;
+    vertical-align: middle !important;
+}
+
+.table-modern .total-row td.total-label {
+    text-align: right !important;
+    padding-right: 12px !important;
+    font-weight: 600 !important;
+    color: #1E2A3A;
+}
+
+.table-modern .total-row td.total-value {
+    text-align: center !important;
+    font-weight: 600 !important;
+    color: #1E2A3A;
+}
+
+/* ========================= KOLOM AKSI ========================= */
+.aksi-col {
+    width: 110px !important;
+    padding: 5px !important;
+    text-align: center !important;
+}
+
+.aksi-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.aksi-wrapper .btn {
+    padding: 4px 8px !important;
+    font-size: 12px !important;
+    border-radius: 6px !important;
+    display: flex;
+    align-items: center;
+    transition: 0.2s ease;
+}
+
+.aksi-wrapper .btn i {
+    font-size: 14px;
+}
+
+.aksi-wrapper .btn-warning:hover,
+.aksi-wrapper .btn-danger:hover {
+    transform: scale(1.07);
+}
+
+/* ========================= BUTTON NAVY ========================= */
+.btn-navy {
+    background: #1E2A3A;
+    color: #D9E6FF;
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-navy:hover {
+    background: #3A6DAB;
+    color: white;
+    box-shadow: 0 4px 14px rgba(58,109,171,0.35);
+}
+
+/* ========================= ANIMASI ========================= */
+.welcome-text {
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    position: relative;
+    animation: slideFade 1.1s forwards;
+    color: #1E2A3A;
+}
+
+@keyframes slideFade {
+    0% { opacity: 0; left: -20px; }
+    100% { opacity: 1; left: 0; }
+}
+
+/* ========================= RUMUS & KETERANGAN ========================= */
+.rumus-section {
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+.rumus-section b {
+    font-size: 1rem;
+    color: #000;
+    font-weight: 700;
+}
+
+.rumus-formula {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 0.5px;
+}
+
+/* Keterangan di bawah rumus */
+.keterangan-section {
+    margin-top: 1rem;
+    text-align: left;
+    color: #333;
+    font-size: 0.95rem;
+    background: none;
+    border-left: 4px solid #1E2A3A;
+    padding-left: 10px;
+}
+
+.keterangan-section i {
+    color: #444;
+}
+
+.keterangan-section ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding-left: 1.5rem;
+}
+
+.keterangan-section li {
+    margin-bottom: 0.25rem;
+    line-height: 1.5;
+}
+
+.keterangan-section b {
+    color: #000;
+}

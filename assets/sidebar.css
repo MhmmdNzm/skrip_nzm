@@ -1,0 +1,202 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(180deg, #1E2A3A 0%, #16202D 100%);
+    padding: 25px 20px;
+    color: white;
+    box-shadow: 3px 0 12px rgba(0,0,0,0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(6px);
+    transition: 0.3s ease;
+}
+
+
+.sidebar.collapsed { width: 80px; }
+.sidebar.collapsed .brand-title,
+.sidebar.collapsed a span.text { display: none; }
+.sidebar.collapsed a { justify-content: center; }
+.sidebar.collapsed a .icon { margin: 0; }
+
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+
+.sidebar-logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 14px;  
+    transition: 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-logo {
+    width: 40px;
+    height: 40px;
+    margin: 0; 
+}
+
+
+.sidebar .brand-title {
+    color: #D9E6FF;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+
+.sidebar a {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #D9E6FF;
+    text-decoration: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+}
+
+.sidebar a .icon {
+    font-size: 18px;
+    transition: 0.25s ease;
+    opacity: 0.85;
+}
+
+.sidebar a:hover {
+    background: rgba(58,109,171,0.28);
+    transform: translateX(6px);
+    box-shadow: 0 3px 12px rgba(58,109,171,0.3);
+}
+
+.sidebar a:hover .icon {
+    transform: scale(1.18) rotate(5deg);
+    color: #3A6DAB;
+}
+
+.sidebar a.active {
+    background: rgba(58,109,171,0.35);
+    box-shadow: 0 3px 12px rgba(58,109,171,0.35);
+    transform: translateX(6px);
+}
+
+.sidebar a.active .icon {
+    color: #3A6DAB;
+    transform: scale(1.2);
+}
+
+
+.admin-greet {
+    color: #D9E6FF;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.admin-greet i {
+    color: #3A6DAB;
+    transition: 0.3s ease;
+}
+
+.admin-greet:hover i { transform: scale(1.15); }
+
+
+.topbar {
+    position: fixed;
+    left: 250px;
+    right: 0;
+    top: 0;
+    height: 60px;
+    background: linear-gradient(135deg, #1E2A3A, #16202D);
+    color: #D9E6FF;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 25px;
+    z-index: 60;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 2px 14px rgba(0,0,0,0.45);
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease;
+}
+
+.sidebar.collapsed ~ .topbar { left: 80px; }
+
+
+.content {
+    margin-left: 250px;
+    padding: 90px 25px 25px;
+    background: #F3F4F6;
+    min-height: 100vh;
+    border-radius: 12px;
+    box-shadow: inset 0 0 22px rgba(0,0,0,0.12);
+    transition: 0.3s ease;
+}
+
+.sidebar.collapsed ~ .content { margin-left: 80px; }
+
+
+.card-navy {
+    background: linear-gradient(135deg, #1E2A3A, #16202D);
+    color: #D9E6FF;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.card-navy:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+
+.btn-navy {
+    background: #1E2A3A;
+    color: #D9E6FF;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-navy:hover {
+    background: #3A6DAB;
+    color: white;
+    box-shadow: 0 4px 12px rgba(58,109,171,0.35);
+    transform: translateY(-2px);
+}
+
+
+.welcome-text { 
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0;
+    position: relative;
+    animation: slideFade 1.5s forwards;
+    color: #000000 !important;
+}
+
+@keyframes slideFade {
+    0% { opacity: 0; left: -18px; }
+    100% { opacity: 1; left: 0; }
+}

@@ -1,0 +1,147 @@
+  .page-wrapper {
+    margin-left: 250px;
+    padding: 90px 35px 35px;
+    transition: 0.3s ease;
+}
+
+.sidebar.collapsed ~ .page-wrapper {
+    margin-left: 80px;
+}
+
+.table-wrapper {
+    background: #ffffff;
+    padding: 0;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    overflow: hidden;
+    border: 1px solid #e2e2e2;
+    margin-top: 18px;
+}
+
+.table-modern thead tr {
+    background: #1E2A3A !important;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.6px;
+}
+
+.table-modern thead th {
+    text-align: center !important;
+    vertical-align: middle !important;
+    padding: 12px 10px;
+}
+
+.table-modern td {
+    padding: 10px 12px !important;
+    font-size: 14px;
+    border-color: #e5e5e5 !important;
+    vertical-align: middle !important;
+}
+
+.table-modern tbody tr {
+    transition: 0.25s ease;
+}
+.table-modern tbody tr:hover {
+    background: rgba(58,109,171,0.08) !important;
+}
+.table-modern tbody tr:nth-child(odd) {
+    background: #fafafa;
+}
+
+.table-modern td,
+.table-modern th {
+    text-align: center !important;
+}
+
+.table-modern td:nth-child(3) {
+    text-align: left !important;
+}
+
+.aksi-col {
+    width: 120px !important;
+    padding: 5px !important;
+    text-align: center !important;
+}
+
+.aksi-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.aksi-wrapper .btn {
+    padding: 4px 10px !important;
+    font-size: 13px !important;
+    border-radius: 6px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s ease;
+}
+
+.aksi-wrapper .btn i {
+    font-size: 14px;
+}
+
+.aksi-wrapper .btn-warning:hover,
+.aksi-wrapper .btn-danger:hover {
+    transform: scale(1.07);
+}
+
+.box-form {
+    background: #ffffff;
+    padding: 18px 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05); /* bayangan lebih lembut */
+    border: none; /* hilangkan garis tebal di sisi kiri/kanan */
+    margin-bottom: 25px;
+}
+
+}
+.box-form input {
+    height: 42px;
+    background: #fff !important;
+    border: 1px solid #dcdfe4;
+    color: #1E2A3A;
+}
+.box-form input:focus {
+    border-color: #3A6DAB;
+    box-shadow: 0 0 0 2px rgba(58,109,171,0.2);
+}
+.box-form button {
+    height: 42px;
+    font-weight: 600;
+}
+
+.btn-navy {
+    background: #1E2A3A;
+    color: #D9E6FF;
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-navy:hover {
+    background: #3A6DAB;
+    color: white;
+    box-shadow: 0 4px 14px rgba(58,109,171,0.35);
+}
+
+.welcome-text { 
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    position: relative;
+    animation: slideFade 1.1s forwards;
+    color: #1E2A3A;
+}
+
+@keyframes slideFade {
+    0% { opacity: 0; left: -20px; }
+    100% { opacity: 1; left: 0; }
+}
